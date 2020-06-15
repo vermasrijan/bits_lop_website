@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Default</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+<style>
+h1 {text-align: center;}
+</style>
+
+</head>
+<body>
+
+	<div class="ui container">
+		<div class="ui large menu">
+			<div class="vertically fitted item">
+			    <h2>Laboratory Project Visualization</h2>
+		  	</div>
+
+			<div class="right menu">
+
+
+				<form action="/">
+					<button class="ui vertical animated teal button" tabindex="0">
+					  <div class="hidden content"><i class="arrow circle left icon"></i></div>
+					  <div class="visible content">Go Back</div>
+					</button>
+				</form>
+
+				<form action="/">
+					<button class="ui vertical animated teal button" tabindex="0">
+					  <div class="hidden content"><i class="home icon"></i></div>
+					  <div class="visible content">Home</div>
+					</button>
+				</form>
+
+				<a href="https://universe.bits-pilani.ac.in/pilani/pandeymm/profile" target="_blank">
+					<button class="ui vertical animated teal button" tabindex="0">
+					  <div class="hidden content"><i class="users icon"></i></div>
+					  <div class="visible content">Contact</div>
+					</button>
+				</a>
+
+			</div>
+
+
+
+		</div>
+
+	</div>
+
+<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+
+
+<div class="ui three column grid">
+  <div class="row">
+    <div class="column">
+		<div class="ui segment">
+			<h3> Query SMILES</h3>
+				<div style="height: 300px; width: 500px;"
+
+				  class='viewer_3Dmoljs' data-datatype='sdf'
+				  data-backgroundcolor='#000000'
+				  data-href="{{ url_for('static', filename=sdf_file) }}"
+				  data-style='stick'>
+
+				</div>
+
+				<script>
+
+					setInterval(function() {
+					if($3Dmol.viewers) if($3Dmol.viewers[0]) {
+					  var view = $3Dmol.viewers[0];
+					  view.rotate(1);
+					}
+					}, 50);
+
+				</script>
+		</div>
+	</div>
+
+    <div class="column">
+		<div class="ui segment">
+			<h3> 3D Query PDB ID</h3>
+				<div style="height: 300px; width: 500px;"
+
+				  class='viewer_3Dmoljs'
+				  data-backgroundcolor='#000000'
+				  data-pdb="{{ pdb }}"
+				  data-style='{"cartoon":{"color": "spectrum"}}'>
+
+				</div>
+
+				<script>
+					setInterval(function() {
+					if($3Dmol.viewers) if($3Dmol.viewers[1]) {
+					  var view = $3Dmol.viewers[1];
+					  view.rotate(1);
+					}
+					}, 50);
+				</script>
+		</div>
+
+	</div>
+
+    <div class="column">
+
+			<div class="ui segment">
+			<h3>2D Query SMILES Image</h3>
+			<img class="ui medium image" src="data:image/png;base64,{{ binary_image }}" />
+
+			</div>
+
+	</div>
+
+  </div>
+
+  <div class="column">
+	  <div class="ui segment">
+		  <h5>Query SMILES string: {{ query_smi }} </h5>
+
+	  </div>
+  </div>
+
+  <div class="column">
+	  <div class="ui segment">
+		  <h5>Query PDB ID: {{ pdb }} </h5>
+
+	  </div>
+  </div>
+
+
+
+</div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/semantic.min.css" rel="stylesheet" />
+
+<div class="ui inverted vertical footer segment form-page">
+  <div class="ui container center aligned">
+		<p style="font-size:18px;color:darkorchid">
+			Principal Investigator: <br>
+			<a href="https://universe.bits-pilani.ac.in/pilani/pandeymm/profile" target="_blank">
+				 Dr. Murali Monohar Pandey,</a> Assistant Professor,<br>  Department of Pharmacy, <br>
+			Birla Institute of Technology and Science, Pilani <br>
+			Vidya Vihar  Campus, Pilani- 333031<br>
+			Rajasthan <br>
+			India <br>
+			</a> <br>
+
+				This page is created and maintained by
+			<a  href="https://www.linkedin.com/in/vermasrijan/" target="_blank">
+				Srijan Verma, </a>  Final year B.Pharm student.
+
+		</p>
+  </div>
+
+</body>
+</html>
+

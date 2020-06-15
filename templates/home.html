@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laboratory Project</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+<style>
+h1 {text-align: center;}
+
+#footer {
+    background-color: #F3F3F3;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+code {
+    background: hsl(320, 80%, 90%);
+}
+
+</style>
+
+</head>
+<body>
+	
+	<div class="ui container">
+		<div class="ui large menu">
+			<div class="vertically fitted item">
+			    <h2>Laboratory Project</h2>
+		  	</div>
+			
+			<div class="right menu">
+
+				<form action="/home">
+					<button class="ui vertical animated teal button" tabindex="0">
+					  <div class="hidden content"><i class="home icon"></i></div>
+					  <div class="visible content">Home</div>
+					</button>
+				</form>
+
+				<a href="https://universe.bits-pilani.ac.in/pilani/pandeymm/profile" target="_blank">
+					<button class="ui vertical animated teal button" tabindex="0">
+					  <div class="hidden content"><i class="github icon"></i></div>
+					  <div class="visible content">GitHub</div>
+					</button>
+				</a>
+
+				<a href="https://universe.bits-pilani.ac.in/pilani/pandeymm/profile" target="_blank">
+					<button class="ui vertical animated teal button" tabindex="0">
+					  <div class="hidden content"><i class="users icon"></i></div>
+					  <div class="visible content">Contact</div>
+					</button>
+				</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+<div class="ui container center aligned">
+<form action="/" method="post">
+	<div class="ui action input">
+	  <input type="text" placeholder="Input SMILES" id="smiles" name="smiles">
+		<input type="text" placeholder="Input PDB ID" id="pdb" name="pdb">
+
+
+	<input type="submit" name="Similarity" class="ui button" id="submit_btn" value="Submit" />
+	</div>
+</form>
+
+</div>
+
+		<div class="ui segment">
+			<div class="ui container center aligned">
+				<p><h3>MolVisualize Web-App developed During Laboratory Project (PHA F366)</h3>
+					<h4>Supervisor : Dr. Murali Monohar Pandey</h4>
+				</p>
+				<div class="ui segment">
+					<h4>Instructions on how to use this Web-App: </h4>
+					Enter a valid SMILES string and a PDB ID, in the input boxes given above, and press submit, for 3D visualization.
+				</div>
+
+			</div>
+
+		</div>
+
+
+<div class="ui container center aligned">
+	<div class="ui two column grid">
+		  <div class="row">
+						<div class="column">
+							<div class="ui segment">
+								<div class="ui container left aligned">
+										<p><h4>-> Example PDB IDs:</h4>
+										Poloxamer 188 : <code>3GKO</code>
+										<br>
+										Gelucire : <code>4O8H</code>
+										<br>
+										2019-nCoV Coronavirus : <code>6LU7</code>
+										<br>
+										SARS-CoV Spike Glycoprotein : <code>5XLR</code>
+										</p>
+								</div>
+							</div>
+						</div>
+						<div class="column">
+							<div class="ui segment">
+								<div class="ui container left aligned">
+										<p><h4>-> Example SMILES:</h4>
+										Felodipine : <code>CCOC(=O)C1=C(C)NC(C)=C(C1c2cccc(Cl)c2Cl)C(=O)OC</code>
+										<br>
+										Paracetamol : <code>CC(=O)NC1=CC=C(C=C1)O</code>
+										<br>
+										Hydroxychloroquine : <code>CCN(CCCC(C)NC1=C2C=CC(=CC2=NC=C1)Cl)CCO</code>
+										<br>
+										Alprazolam : <code>CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4</code>
+
+										</p>
+								</div>
+							</div>
+						</div>
+		  </div>
+	</div>
+</div>
+
+
+<div style="display: none;">
+
+			<div class="ui segment">
+			  <div class="ui active dimmer">
+				<div class="ui large text loader">Loading</div>
+			  </div>
+			  <p></p>
+			  <p></p>
+
+			</div>
+</div>
+
+<div class="ui container center aligned">
+		<div class="ui segment">
+			<h4>Technology Stack used here: </h4>
+			<a href="https://www.rdkit.org/" target="_blank">RDKit,</a>
+			<a href="https://3dmol.csb.pitt.edu/" target="_blank">3Dmol.js</a>,
+			<a href="https://www.docker.com/" target="_blank">Docker</a>,
+			<a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank">Flask</a>,
+			<a href="https://www.heroku.com/" target="_blank">Heroku</a>
+		</div>
+</div>
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/semantic.min.css" rel="stylesheet" />
+
+</div>
+
+<!-- <div id='footer'> -->
+
+		<div class="ui inverted vertical footer segment form-page">
+			<div class="ui container center aligned">
+			<p style="font-size:18px;color:darkorchid">
+				Principal Investigator: <br>
+				<a href="https://universe.bits-pilani.ac.in/pilani/pandeymm/profile" target="_blank">
+					 Dr. Murali Monohar Pandey,</a> Assistant Professor,<br>  Department of Pharmacy, <br>
+				Birla Institute of Technology and Science, Pilani <br>
+				Vidya Vihar  Campus, Pilani- 333031<br>
+				Rajasthan <br>
+				India <br>
+				</a> <br>
+
+					This page is created and maintained by
+				<a  href="https://www.linkedin.com/in/vermasrijan/" target="_blank">
+					Srijan Verma, </a>  Final year B.Pharm student.
+
+			</p>
+			 </div>
+	<!-- </div> -->
+  </div>
+
+</body>
+</html>
