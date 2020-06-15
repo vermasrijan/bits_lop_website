@@ -1,9 +1,7 @@
-# BITS Laboratory Project, PHA-F366: 
+# BITS Laboratory Project, PHA-F366
 MolVisualize Web-App developed During Laboratory Project (PHA F366)
 
 ### Mentor : [Dr. Murali Monohar Pandey](https://universe.bits-pilani.ac.in/pilani/pandeymm/profile)<br/><br/>
-
-
 
 ## Installation:
 ### Option 1: Conda
@@ -23,7 +21,7 @@ OR <br/>
 2. `cd /path/to/bits_lop_website`
 3. Open `Dockerfile` using any editor.
 4. Comment the following line -> `CMD gunicorn web-app:app --bind 0.0.0.0:$PORT --reload`
-5. Uncomment the follwoing 2 lines ->
+5. Uncomment the following 2 lines ->
 ```
 EXPOSE 8080
 ENTRYPOINT ["python3", "web-app.py"]
