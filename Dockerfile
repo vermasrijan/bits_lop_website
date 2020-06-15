@@ -19,9 +19,10 @@ COPY web-app.py ./
 
 # For webapp
 
-# Define our command to be run when launching the container
+# Define our command to be run when launching the container, on Heroku
 CMD gunicorn web-app:app --bind 0.0.0.0:$PORT --reload
 
+# Comment out the following 2 lines, if running locally
 # EXPOSE 8080
 # ENTRYPOINT ["python3", "web-app.py"]
 # EXPOSE 5000
