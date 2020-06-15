@@ -1,7 +1,7 @@
 # BITS Laboratory Project, PHA-F366: 
-3D MolVisualizer
+MolVisualize Web-App developed During Laboratory Project (PHA F366)
 
-### Mentors : [Dr. Murali Monohar Pandey](https://universe.bits-pilani.ac.in/pilani/pandeymm/profile)<br/><br/>
+### Mentor : [Dr. Murali Monohar Pandey](https://universe.bits-pilani.ac.in/pilani/pandeymm/profile)<br/><br/>
 
 
 
@@ -32,6 +32,8 @@ ENTRYPOINT ["python3", "web-app.py"]
 7. `docker run -p 5000:5000 lop`
 8. Go to `localhost:8080` OR `http://127.0.0.1:8080/`
 
+### Option 3: Docker on Heroku Cloud
+- Reference Link:  [YouTube](https://www.youtube.com/watch?v=J6TvtIqgbjA) and [this](https://github.com/sfdcbrewery/resumeappdf18) repository <br/>
 1. Log in to Container Registry:
 
 ```
