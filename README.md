@@ -3,6 +3,8 @@ MolVisualize Web-App developed During Laboratory Project (PHA F366)
 
 ### Mentor : [Dr. Murali Monohar Pandey](https://universe.bits-pilani.ac.in/pilani/pandeymm/profile)<br/><br/>
 
+![](images_other/final.gif)
+
 ## Installation:
 ### Option 1: Conda
 1. Install Miniconda, for your operating system, from [https://conda.io/miniconda.html](https://conda.io/miniconda.html)

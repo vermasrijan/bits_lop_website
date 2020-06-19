@@ -84,5 +84,5 @@ def default():
     return render_template('default.html', query_smi=smiles, binary_image=binary_image, sdf_file=new_sdf_name, pdb=pdb)
 
 if __name__ == '__main__':
-    # app.run(host='0.0.0.0')
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
+    # app.run(debug=True)

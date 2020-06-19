@@ -83,11 +83,68 @@ code {
 				<div class="ui segment">
 					<h4>Instructions on how to use this Web-App: </h4>
 					Enter a valid SMILES string and a PDB ID, in the input boxes given above, and press submit, for 3D visualization.
+					<br>
+					Rotate, Zoom-in OR Zoom-out the structures!
+					<h4>Example Outputs given below --></h4>
 				</div>
 
 			</div>
 
 		</div>
+
+<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+
+<div class="ui container center aligned">
+	<div class="ui two column grid">
+		  <div class="row">
+						<div class="column">
+							<div class="ui segment">
+								<h4>-> Example SMILES string: <code>CC(=O)NC1=CC=C(C=C1)O</code></h4>
+								<div style="height: 300px; width: 500px;"
+
+								  class='viewer_3Dmoljs' data-datatype='sdf'
+								  data-backgroundcolor='#000000'
+								  data-href='/static/home_page_pcm.sdf'
+								  data-style='stick'>
+
+								</div>
+
+								<script>
+
+									setInterval(function() {
+									if($3Dmol.viewers) if($3Dmol.viewers[0]) {
+									  var view = $3Dmol.viewers[0];
+									  view.rotate(1);
+									}
+									}, 50);
+
+								</script>
+
+							</div>
+						</div>
+						<div class="column">
+							<div class="ui segment">
+								<h4>-> Example PDB ID: <code>1UBQ</code></h4></h4>
+								<div style="height: 300px; width: 500px;"
+								  class='viewer_3Dmoljs'
+								  data-backgroundcolor='#000000'
+								  data-pdb="1UBQ"
+								  data-style='{"cartoon":{"color": "spectrum"}}'>
+								</div>
+								<script>
+									setInterval(function() {
+									if($3Dmol.viewers) if($3Dmol.viewers[1]) {
+									  var view = $3Dmol.viewers[1];
+									  view.rotate(1);
+									}
+									}, 50);
+								</script>
+							</div>
+						</div>
+		  </div>
+	</div>
+</div>
+
 
 
 <div class="ui container center aligned">
@@ -96,22 +153,7 @@ code {
 						<div class="column">
 							<div class="ui segment">
 								<div class="ui container left aligned">
-										<p><h4>-> Example PDB IDs:</h4>
-										Poloxamer 188 : <code>3GKO</code>
-										<br>
-										Gelucire : <code>4O8H</code>
-										<br>
-										2019-nCoV Coronavirus : <code>6LU7</code>
-										<br>
-										SARS-CoV Spike Glycoprotein : <code>5XLR</code>
-										</p>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="ui segment">
-								<div class="ui container left aligned">
-										<p><h4>-> Example SMILES:</h4>
+										<p><h4>-> Other Example SMILES:</h4>
 										Felodipine : <code>CCOC(=O)C1=C(C)NC(C)=C(C1c2cccc(Cl)c2Cl)C(=O)OC</code>
 										<br>
 										Paracetamol : <code>CC(=O)NC1=CC=C(C=C1)O</code>
@@ -120,6 +162,21 @@ code {
 										<br>
 										Alprazolam : <code>CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4</code>
 
+										</p>
+								</div>
+							</div>
+						</div>
+						<div class="column">
+							<div class="ui segment">
+								<div class="ui container left aligned">
+										<p><h4>-> Other Example PDB IDs:</h4>
+										Poloxamer 188 : <code>3GKO</code>
+										<br>
+										Gelucire : <code>4O8H</code>
+										<br>
+										2019-nCoV Coronavirus : <code>6LU7</code>
+										<br>
+										SARS-CoV Spike Glycoprotein : <code>5XLR</code>
 										</p>
 								</div>
 							</div>
